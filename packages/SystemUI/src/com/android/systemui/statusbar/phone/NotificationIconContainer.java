@@ -831,8 +831,7 @@ public class NotificationIconContainer extends ViewGroup {
                     }
                 }
                 icon.setVisibleState(visibleState, animationsAllowed);
-                boolean newIconStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
-                            Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT) == 1;
+                boolean newIconStyle = true;
                 if (icon.getStatusBarIcon().pkg.contains("systemui") || !newIconStyle) {
                     if (mOverrideIconColor) {
                         int overrideIconColor = mUseInverseOverrideIconColor
@@ -883,8 +882,7 @@ public class NotificationIconContainer extends ViewGroup {
             super.initFrom(view);
             if (view instanceof StatusBarIconView) {
                 StatusBarIconView icon = (StatusBarIconView) view;
-                boolean newIconStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
-                            Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT) == 1;
+                boolean newIconStyle = true;
                 if (icon.getStatusBarIcon().pkg.contains("systemui") || !newIconStyle) {
                     iconColor = ((StatusBarIconView) view).getStaticDrawableColor();
                 } else {

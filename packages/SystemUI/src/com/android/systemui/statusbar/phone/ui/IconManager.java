@@ -131,8 +131,7 @@ public class IconManager implements DemoModeCommandReceiver {
         mKairosNetwork = kairosNetwork;
         mAppScope = appScope;
 
-        mNewIconStyle = Settings.System.getIntForUser(mContext.getContentResolver(),
-            Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT) == 1;
+        mNewIconStyle = true;
 
         reloadDimens();
 
