@@ -24,4 +24,8 @@
     <bool name="is_small_screen_landscape">true</bool>
 
     <bool name="volume_dialog_ringer_drawer_should_open_to_the_side">true</bool>
+    
+    <bool name="config_use_split_notification_shade">true</bool>
+    <bool name="config_skinnyNotifsInLandscape">false</bool>
+    <bool name="can_use_one_handed_bouncer">true</bool>
 </resources>
